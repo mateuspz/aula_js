@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Teste querySelector</title>
+</head>
+<body>
+  <h1 id="tituloPrincipal">Bem-vindo!</h1>
+  <p class="destaque">Esse é o primeiro parágrafo em destaque.</p>
+  <p>Esse é outro parágrafo normal.</p>
+
+  <ul> Lista de Frutas
+    <li>Maçã</li>
+    <li>Uva</li>
+    <li>Laranja</li>
+  </ul>
+
+  <script>
+    // Selecionando por ID
+    const titulo = document.querySelector("#tituloPrincipal");
+    console.log("Título:", titulo.textContent);
+
+    // Selecionando por Classe
+    const itemDestaque = document.querySelector(".destaque");
+    console.log("Parágrafo destaque:", itemDestaque.textContent);
+
+    // Selecionando por Tag
+    const primeiroH1 = document.querySelector("h1");
+    console.log("Primeiro H1:", primeiroH1.textContent);
+
+    // Selecionando vários elementos
+    const todosOsItens = document.querySelectorAll("li");
+    todosOsItens.forEach(item => console.log("Item da lista:", item.textContent));
+
+  </script>
+</body>
+</html>
